@@ -1,12 +1,3 @@
-﻿## 目标
-探究肺癌患者的CT图像的图像特征并构建一个诊断模型
-## 效果图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b9ae501fa00c4a9588f322151609b8b4.png)
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4a139415a1d44a77a51884dd9371cb31.png)
-
-## 代码
-
-```python
 import os
 import cv2
 import numpy as np
@@ -124,56 +115,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
-
-## 操作说明
-
-
-代码中我以建立10张图为例，多少你自己定
-
-准备工作：
-1.准备肺癌或非肺癌每个各10张图，在本地创建一个名为“data”的文件夹，用于存放数据集。在“data”文件夹下创建两个子文件夹，分别命名为“cancer”和“non_cancer”，用于存放肺癌和非肺癌图像。将10张肺癌图像命名为“cancer_1.jpg”到“cancer_10.jpg”，并将它们放入“cancer”文件夹中。将10张非肺癌图像命名为“non_cancer_1.jpg”到“non_cancer_10.jpg”，并将它们放入“non_cancer”文件夹中。
-
-
-2. 在开始编写和执行代码之前，请确保已经安装完成以下库：
-
-TensorFlow：用于构建和训练深度学习模型
-Keras：用于快速构建和训练模型
-scikit-learn：用于评估模型和数据预处理
-numpy：用于数组和矩阵操作
-OpenCV：用于处理和操作图像数据
-matplotlib：用于可视化结果
-
-安装命令
-
-```python
-pip install tensorflow 
-pip install keras 
-pip install scikit-learn 
-pip install numpy 
-pip install opencv-python 
-pip install matplotlib
-```
-
-
-
-确保在本地创建了一个名为“data”的文件夹，并在其中创建了名为“cancer”和“non_cancer”的子文件夹。
-将肺癌和非肺癌图像分别放入对应的子文件夹，并确保它们的命名正确
-
-
-3.然后就可以复制上txt里面的代码进行执行了（记得改代码里面路径）
- ![在这里插入图片描述](https://img-blog.csdnimg.cn/992651ed1c9840aa9c867cd8be91060e.png)
-
-
-
-注意事情：
-4. 图像大小：在load_images()函数中，已将图像调整为150x150大小。您可以根据实际情况更改此尺寸，但请注意，较大的图像可能会增加计算成本和训练时间。
-例如，将图像大小调整为224x224：。
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/fdcaf65c68814659bc1b15906aae116f.png)
-
-
-5.灰度图像：如果您的图像是灰度图像，可以将图像从单通道灰度转换为3通道灰度，以适应模型。在load_images()函数中添加如下代码
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/448bc40cbb6842a39e41415aae99e751.png)
-
